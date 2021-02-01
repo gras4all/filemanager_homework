@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fdp-6V-DKy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wVe-FB-ENs">
+            <objects>
+                <navigationController id="Fdp-6V-DKy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kEb-DN-m8a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="11e-SW-Jcl" kind="relationship" relationship="rootViewController" id="pZ6-bx-8Aj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRi-od-dBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14" y="736"/>
+        </scene>
+        <!--Directory View Controller-->
+        <scene sceneID="L23-0a-CyX">
+            <objects>
+                <viewController storyboardIdentifier="DirectoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="11e-SW-Jcl" customClass="DirectoryViewController" customModule="filemanager_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWg-Y4-517">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="JBv-FF-tDl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FileCell" id="rYG-sb-Qnu" customClass="FileCell" customModule="filemanager_homework" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rYG-sb-Qnu" id="8b3-c3-k8Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-Iw-c2c">
+                                                    <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="E29-a4-56T"/>
+                                                        <constraint firstAttribute="height" constant="32" id="r09-30-AHb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmv-pn-Eq7">
+                                                    <rect key="frame" x="58" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F73-YN-2vI">
+                                                    <rect key="frame" x="378" y="16" width="16" height="12.5"/>
+                                                    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="DNL-Fz-vi0"/>
+                                                        <constraint firstAttribute="width" constant="16" id="KNF-yb-Bzi"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fTc-Iw-c2c" firstAttribute="leading" secondItem="8b3-c3-k8Z" secondAttribute="leading" constant="16" id="IVE-Zw-Yi5"/>
+                                                <constraint firstAttribute="trailing" secondItem="F73-YN-2vI" secondAttribute="trailing" constant="20" id="Pwk-gC-SON"/>
+                                                <constraint firstItem="tmv-pn-Eq7" firstAttribute="leading" secondItem="fTc-Iw-c2c" secondAttribute="trailing" constant="10" id="dxW-Bp-h5s"/>
+                                                <constraint firstItem="tmv-pn-Eq7" firstAttribute="centerY" secondItem="8b3-c3-k8Z" secondAttribute="centerY" id="eGr-WW-Ath"/>
+                                                <constraint firstItem="F73-YN-2vI" firstAttribute="centerY" secondItem="8b3-c3-k8Z" secondAttribute="centerY" id="fl6-N1-87J"/>
+                                                <constraint firstItem="fTc-Iw-c2c" firstAttribute="centerY" secondItem="8b3-c3-k8Z" secondAttribute="centerY" id="l1F-96-B2Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="directoryArrow" destination="F73-YN-2vI" id="gfH-mE-OSo"/>
+                                            <outlet property="fileIcon" destination="fTc-Iw-c2c" id="dsk-nz-nhB"/>
+                                            <outlet property="fileLabel" destination="tmv-pn-Eq7" id="21I-bL-C35"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SXV-DV-zaD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JBv-FF-tDl" firstAttribute="top" secondItem="SXV-DV-zaD" secondAttribute="top" id="0UT-Ul-qbh"/>
+                            <constraint firstItem="JBv-FF-tDl" firstAttribute="leading" secondItem="SXV-DV-zaD" secondAttribute="leading" id="6kL-aj-7ej"/>
+                            <constraint firstItem="SXV-DV-zaD" firstAttribute="trailing" secondItem="JBv-FF-tDl" secondAttribute="trailing" id="DZa-u7-Bd1"/>
+                            <constraint firstItem="SXV-DV-zaD" firstAttribute="bottom" secondItem="JBv-FF-tDl" secondAttribute="bottom" id="oUz-Tz-UQy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ry8-HI-WDP"/>
+                    <connections>
+                        <outlet property="filesTableView" destination="JBv-FF-tDl" id="PVK-zg-qD2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3i-Qb-Qon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876.81159420289862" y="735.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
